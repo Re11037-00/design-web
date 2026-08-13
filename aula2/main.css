@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+h1{
+    text-align: center;
+}
+header, footer{ /* a vírgula cria um crupo, isto é, as duas marcações ficarão com a formatação */
+    background-color: chocolate;
+    padding: 2rem;
+}
+nav ol{
+    display: flex; /* permite que os filhos do OL fiquem um ao lado do outro, o "display: flex" é sempre aplicado no container */
+
+    justify-content: center;
+    list-style-type: none; /* tira os marcadores, pode ser aplicado ao LI também */
+}
+nav a{
+    background-color: rgb(217, 151, 103);
+    padding: 1rem; 
+    /* 
+    como o âncora é uma marcação do tipo "inline*, o padding
+    não funciona bem, isto é, o espaçamento fica sobre outros elementos...
+    para corrigir este comportamento, é necessário definir o
+    display: inline block. o "display: block" deixará tudo um abaixo do
+    outro, o "inline-block" vai pemitir um comportamento híbrido, isto é,
+    ficará um ao lado do outro (como inline) e permitirá a definição de
+    padding e width (que é possivel com o "block") 
+    */
+    width: 15rem;
+    display: inline-block;
+    text-align: center;
+    margin: 0.5rem;
+    color: black;
+    text-decoration: none; 
+}
+nav a:hover{
+    background-color: rgb(247, 201, 169)
+}
+main{
+    width: 70rem; /*o ideal é pesquisar a largura do site
+     para o público específico do projeto - google analytics*/
+    margin: 0 auto;
+    /* outra estratégia de colocar no centro é: justify-content, com flex*/
+    padding: 2rem;
+    display: flex; 
+    flex-wrap: wrap; /* caso não caibam na mesma linha, as "sections" ficarão embaixo */
+}
+main section{
+    border: 1px solid black  ; /*espessura, estilo, cor. px foi utilizado por ser o menor valor, para espessura mínima*/
+    padding: 2rem;
+    margin: 2rem;
+    width: 26rem;
+}
