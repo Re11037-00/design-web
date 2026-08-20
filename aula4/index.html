@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO CURRÍCULO</title>
+</head>
+<body>
+    <form action="">
+        <label for="nome">Nome</label>
+        <input type="text" id="name"> <br>
+
+        <p>Qual é a sua preferência de área? <br>
+            <label for="pref-design">
+                <input type="checkbox" id="pref-design" name="pref" value="design"> Design
+                <!--
+                    para o input do tipo checkbox é necessário colocar o texto
+                    depois do input (demanda de usabilidade e interface),
+                    colocar o atributo name para criar um grupo 
+                    e o atributo 'value' que é o valor do input, este é equivalente 
+                    ao valor digitado de um input do tipo "text"
+                    -o checkbox é um componente que permite selecionar vários items;
+                    -envia na programação uma lista de itens selecionados.
+                -->
+            </label> <br>
+
+            <label for="pref-manutencao">
+                <input type="checkbox" id="pref-manutencao" name="pref" value="manutencao"> Manutenção
+            </label> <br>
+
+            <label for="pref-redes">
+                <input type="checkbox" id="pref-redes" name="pref" value="redes"> Redes
+            </label>
+        </p>
+        
+        <p>
+            Em qual curso você está? <br>
+            <label>
+                <input type="radio" name="curso" value="infoweb"> INFOWEB
+                <!--
+                    - como o input está na label, não preciso colocar for
+                    - o tipo 'radio' só permite selecionar um item
+                    - o atributo 'name' é IMPRESCINDÍVEL porque ele cria o grupo itens 
+                    ('checkbox' e 'radio'), será o nome lista na programação
+                -->
+            </label> <br>
+
+            <label>
+                <input type="radio" name="curso" value="adm"> ADMINISTRAÇÃO
+            </label> <br>
+
+            <label>
+                <input type="radio" name="curso" value="manutencao"> MANUTENÇÃO
+            </label>
+        </p>
+
+        <label for="cidade">Cidade</label>
+        <input type="text" id="cidade" list="datalist-cidade">
+        <datalist id="datalist-cidade">
+            <!--
+                - o componente datalist é novo
+                - permite que o usuário seleciona uma opção ou digite
+                - 
+                para criar um vínculo input-datalist é necessário colocar o atributo
+                'list' no input, que recebe o 'id' do datalist
+            -->
+            <option value="Natal"></option>
+            <option value="Recife"></option>
+            <option value="João Pessoa"></option>
+        </datalist>
+
+        <br>
+        <label for="idade">
+            Idade:
+        </label>
+        <input type="number" id="idade"> <br>
+
+        <fieldset>
+            <!-- Componente APENAS para organização -->
+             <legend>MENSAGEM</legend>
+             <!-- compoente legend é o título da grupo -->
+             <label for="mensagem">Mensagem:</label> <br>
+             <textarea name="textarea" id="textarea" cols="30" rows="10" maxlength="500"></textarea>
+            <!--
+             - textarea é um componente que permite texto longo (cuidado com o bd)
+             - tem marcação de abertura e fechamento
+             - o conteúdo de 'dentro' é justamente o 'value' do 'input'
+             - estão permitidos os atributos de formatação 'rows' e 'cols'
+            -->
+
+            </fieldset>
+
+            <input type="hidden" id="id-user" value="5487">
+            <!--
+                hidden: escondido (dentro do formulário)
+                - quando preciso colocar uma informação escondida, por exemplo, o id do usuário.
+                - outro exemplo, quando faço um formulário longo. que tem várias páginas...
+                - posso colocar os dados digitados na próxima página e enviar pra programação tudo de uma vez
+            -->
+
+        <!--<p>Qual sua preferência de área: <br>
+            <label for="design">
+                <input type="checkbox" id="design" name="pref" value="design"> Design
+            </label> <br>
+            <label for="manutencao">
+                <input type="checkbox" id="manutencao" name="pref" value="manutencao"> Manutenção
+            </label> <br>
+            <label for="redes">
+                <input type="checkbox" id="redes" name="pref" value="redes"> Redes
+            </label>
+        </p> -->
+
+        <input type="submit" value="ENVIAR">
+
+    </form>
+
+</body>
+</html>
