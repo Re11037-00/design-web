@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRINGS E DATAS</title>
+</head>
+<body>
+    <h1>STRINGS e DATAS</h1>
+    <script>
+        for(let num=0; num<=10; num++){
+            console.log(num);
+        }
+    </script>
+    <h2>STRING</h2>
+    <script>
+
+        let nome = 'INFOWEB';
+
+        console.log('Comprimento da String: '+ nome.length);
+        console.log('Comprimento da String: '+ 'SAMARA'.length);
+        console.log(`Comprimento da String: ${'SAMARA'.length}`);
+        console.log(`Posição do caractere na String: ${nome.charAt(0)}`);
+        // recebe a posição
+        console.log(`Substitui na String: ${nome.replace('INFO', 'Informática para')}`)
+        console.log(`Fatia a String: ${nome.slice(1,3)}`)
+        // recebe a posição inicial e a posição final (números inteiros)
+        console.log(`Coloca em maiúsculas: ${'ifrn'.toUpperCase()}`)
+        console.log(`Coloca em minúsculas: ${nome.toLowerCase()}`)
+
+        
+    </script>
+
+    <h2>Exemplo com String</h2>
+    <p id="resultado"></p>
+    <script>
+        let nome2 = 'Design Web';
+        for(let i = 0; 1<= nome2.length; i++){
+            document.getElementById('resultado').innerHTML +=
+            '<span style=font-size:'+(i+1)+'rem>'+
+            nome2.charAt(i)
+            +'</span>'
+        }
+    </script>
+    <h2>DATAS</h2>
+    <p id=""datadehoje></p>
+    <script>
+        // funções nativas para Datas
+        const data = new Date();
+        // como o js está no front, a data que será usada é a do PC, se esta estiver errada,
+        // ficará errada...
+
+        console.log('Data de hoje:' +data.getDate());
+        console.log('Mês atual:' +data.getMonth());
+        console.log('Ano completo:' +data.getFullYear());
+        console.log('Minuto:' +data.getMinutes());
+        console.log('Segundos:' +data.getSeconds());
+        console.log('Hora:' +data.getHours());
+    </script>
+</body>
+</html>
